@@ -13,51 +13,58 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+//get, post, put, patch, delete http verb
+
+/*Frontend*/
+Route::get('/', function (){
+
     return view('index');
 });
 
+Route::get('/cart', function (){
 
-Route::get('/category', function () {
-return view('category');
-});
-
-
-Route::get('/cart', function () {
 return view('cart');
 });
 
+Route::get('/category', function (){
 
-Route::get('/single-product', function () {
-return view('single-product');
+return view('category');
 });
+Route::get('/checkout', function (){
 
-
-Route::get('/checkout', function () {
 return view('checkout');
 });
+Route::get('/contact', function (){
 
-Route::get('/contact', function () {
 return view('contact');
 });
+Route::get('/', 'PublicController@index');
+Route::get('/products', 'PublicController@products');
+Route::get('/product_details', 'PublicController@show');
 
-Route::get('/elements', function () {
-return view('elements');
+
+Route::prefix('admin')->group(function (){
+    /*Category routes*/
+    Route::get('/categories', 'CategoryController@index')->name('categories.index');//list
+    Route::get('/categories/create', 'CategoryController@create')->name('categories.create');//create
+    Route::get('/categories/{id}', 'CategoryController@show')->name('categories.show');//show
+    Route::get('/categories/{id}/edit', 'CategoryController@edit');//edit
+
+    /*Product routes*/
+
+
 });
 
-Route::get('/tracking', function () {
-return view('tracking');
-});
 
-Route::get('/single-blog', function () {
-return view('single-blog');
-});
+Route::get('/home', function (){
+    return view('backend.home');
+});//edit
 
 
 
-Route::get('/test-route', function () {
 
-    echo "Testing Route";
-    //return view('welcome');
-});
+
+
+
+
 
