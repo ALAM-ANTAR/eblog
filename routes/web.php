@@ -16,31 +16,22 @@ use Illuminate\Support\Facades\Route;
 //get, post, put, patch, delete http verb
 
 /*Frontend*/
-Route::get('/', function (){
 
-    return view('index');
-});
-
-Route::get('/cart', function (){
-
-return view('cart');
-});
-
-Route::get('/category', function (){
-
-return view('category');
-});
-Route::get('/checkout', function (){
-
-return view('checkout');
-});
 Route::get('/contact', function (){
 
 return view('contact');
 });
+
+/* Frontend Route Start */
+
 Route::get('/', 'PublicController@index');
-Route::get('/products', 'PublicController@products');
-Route::get('/product_details', 'PublicController@show');
+Route::get('/cart', 'PublicController@cart');
+Route::get('/category', 'PublicController@categoty');
+Route::get('/checkout', 'PublicController@checkout');
+Route::get('/contact', 'PublicController@contact');
+
+
+/* Frontend Route Finish  */
 
 
 Route::prefix('admin')->group(function (){
