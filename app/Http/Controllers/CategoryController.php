@@ -12,17 +12,17 @@ class CategoryController extends Controller
         return view('backend.categories.index');
     }
 
-    public function create()
+    public function backendcreate()
     {
         return view('backend.categories.create');
     }
 
-    public function show($id)
+    public function backendshow($id)
     {
         return view('backend.categories.show');
     }
 
-    public function edit($id)
+    public function backendedit($id)
     {
         dd('I am from edit page .'.$id);
     }

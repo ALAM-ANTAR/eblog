@@ -33,18 +33,23 @@ Route::get('/contact', 'PublicController@contact');
 
 /* Frontend Route Finish  */
 
+/* Category Route  Start*/
 
-Route::prefix('admin')->group(function (){
-    /*Category routes*/
-    Route::get('/categories', 'CategoryController@index')->name('categories.index');//list
-    Route::get('/categories/create', 'CategoryController@create')->name('categories.create');//create
-    Route::get('/categories/{id}', 'CategoryController@show')->name('categories.show');//show
-    Route::get('/categories/{id}/edit', 'CategoryController@edit');//edit
-
-    /*Product routes*/
+Route::get('/catagories', 'CategoryController@index');
+Route::get('/catagories/create', 'CategoryController@create');
+Route::get('/catagories/show', 'CategoryController@show');
 
 
-});
+
+
+
+
+
+
+
+/* Category Route Finish*/
+
+
 
 
 Route::get('/home', function (){
