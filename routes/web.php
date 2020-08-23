@@ -26,7 +26,7 @@ return view('contact');
 
 Route::get('/', 'PublicController@index');
 Route::get('/cart', 'PublicController@cart');
-Route::get('/category', 'PublicController@categoty');
+Route::get('/category', 'PublicController@category');
 Route::get('/checkout', 'PublicController@checkout');
 Route::get('/contact', 'PublicController@contact');
 
