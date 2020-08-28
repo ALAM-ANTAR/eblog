@@ -35,9 +35,9 @@ Route::get('/contact', 'PublicController@contact');
 
 /* Category Route  Start*/
 
-Route::get('/catagories', 'CategoryController@index');
-Route::get('/catagories/create', 'CategoryController@create');
-Route::get('/catagories/show', 'CategoryController@show');
+Route::get('/categories', 'CategoryController@index')->name('categories.index');
+Route::get('/categories/create', 'CategoryController@create')->name('categories.create');
+Route::get('/categories/show', 'CategoryController@show')->name('categories.show');
 
 
 
