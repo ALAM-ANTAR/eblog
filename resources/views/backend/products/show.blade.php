@@ -16,6 +16,7 @@
         </div>
         <div class="card-body">
             Details of product show here
+
         </div>
     </div>
 @endsection

@@ -45,7 +45,9 @@ Route::prefix('admin')->group(function(){
 
     /* Category Route Finish*/
 
-    /* Product Route backend Start*/
+
+
+    /* Product Route backend Start  Here*/
 
      Route::get('/products', 'ProductController@index')->name('products.index');
      Route::get('/products/create', 'ProductController@create')->name('products.create');
