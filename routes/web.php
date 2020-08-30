@@ -33,11 +33,29 @@ Route::get('/contact', 'PublicController@contact');
 
 /* Frontend Route Finish  */
 
-/* Category Route  Start*/
 
-Route::get('/categories', 'CategoryController@index')->name('categories.index');
-Route::get('/categories/create', 'CategoryController@create')->name('categories.create');
-Route::get('/categories/show', 'CategoryController@show')->name('categories.show');
+Route::prefix('admin')->group(function(){
+
+    /* Category Route backend Start*/
+
+    Route::get('/categories', 'CategoryController@index')->name('categories.index');
+    Route::get('/categories/create', 'CategoryController@create')->name('categories.create');
+    Route::get('/categories/{id}', 'CategoryController@show')->name('categories.show');
+    Route::get('/categories/{id}/edit', 'CategoryController@show')->name('categories.edit');
+
+    /* Category Route Finish*/
+
+    /* Product Route backend Start*/
+
+     Route::get('/products', 'ProductController@index')->name('products.index');
+     Route::get('/products/create', 'ProductController@create')->name('products.create');
+     Route::get('/products/{id}', 'ProductController@show')->name('products.show');
+     Route::get('/products/{id}/edit', 'ProductController@show')->name('products.edit');
+
+     /* Product Route backend Finish*/
+
+
+    });
 
 
 
@@ -47,7 +65,6 @@ Route::get('/categories/show', 'CategoryController@show')->name('categories.show
 
 
 
-/* Category Route Finish*/
 
 
 
