@@ -60,6 +60,17 @@ Route::prefix('admin')->group(function(){
     });
 
 
+    Route::get('/userlogin', function () {
+
+        return view('frontend.login.index');
+
+    });
+     Route::get('/uregistration', function () {
+
+        return view('frontend.login.newregister');
+     });
+
+
 
 
 
