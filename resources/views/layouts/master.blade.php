@@ -41,7 +41,7 @@
                         <div class="float-right">
                             <ul class="right_side">
                                 <li>
-                                    <a href= '/userlogin'>
+                                    <a href= {{ route('users.index') }}>
                                         Login
                                     </a>
                                 </li>
@@ -51,7 +51,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href='/contact'>
+                                    <a href='/gifcard'>
                                         Gift Card
                                     </a>
                                     <a href='/contact'>
