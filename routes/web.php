@@ -60,15 +60,15 @@ Route::prefix('admin')->group(function(){
     });
 
 
-    Route::get('/userlogin', function () {
+     Route::prefix('user')->group(function(){
 
-        return view('frontend.login.index');
+        Route::get('/login', 'UserAccount@login')->name('users.index');
+        Route::get('/registration', 'UserAccount@registration')->name('users.registration');
 
     });
-     Route::get('/uregistration', function () {
 
-        return view('frontend.login.newregister');
-     });
+
+
 
 
 
