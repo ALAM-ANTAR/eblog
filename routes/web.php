@@ -32,6 +32,7 @@ Route::get('/contact', 'PublicController@contact');
 
 
 /* Frontend Route Finish  */
+/*  Something */
 
 
 Route::prefix('admin')->group(function(){
