@@ -31,7 +31,7 @@ Route::get('/checkout', 'PublicController@checkout');
 Route::get('/contact', 'PublicController@contact');
 
 
-/* Frontend Route Finish  */
+/* Frontend Route Finish   Ok*/
 
 
 
