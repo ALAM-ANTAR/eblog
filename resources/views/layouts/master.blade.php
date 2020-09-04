@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <!--================Header Menu Area  ok =================-->
+    <!--================Header Menu Area =================-->
     <header class="header_area">
         <div class="top_menu">
             <div class="container">
